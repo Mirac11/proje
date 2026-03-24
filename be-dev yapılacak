@@ -1,0 +1,13 @@
+
+Back-End Geliştirici (Python Core & Veri Mantığı)
+Odak Noktası: İş kurallarının (Business Logic) çalıştırılması, veri işleme ve depolama.
+
+Risk Analiz Motoru: İş kurallarını işleyecek Python fonksiyonlarının (Sınıf/Metot yapılarının) yazılması.
+
+Fonksiyon: calculate_risk(balance, delay, active_projects)
+
+Veri Doğrulama (Validation): Arayüzden gelen verilerin tiplerinin kontrol edilmesi (Örn: Bakiyenin negatif olmaması, tarihlerin/günlerin mantıklı sınırda olması).
+
+Veri Depolama Yapısı: Uygulama masaüstü olduğu için verilerin kaydedileceği yerel bir veritabanı (SQLite) veya dosya sisteminin (JSON/CSV) entegrasyonu.
+
+CRUD İşlemleri: Müşteri oluşturma (Create), okuma (Read), güncelleme (Update) ve silme (Delete) işlemlerini yapacak veritabanı sorgularının/kodlarının hazırlanması.
