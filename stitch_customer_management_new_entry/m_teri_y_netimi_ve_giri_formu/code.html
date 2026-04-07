@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Management | Sovereign Analyst</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#0f1f3a",
+                        "tertiary-container": "#dee8ff",
+                        "on-primary-fixed": "#004747",
+                        "primary-fixed": "#93f2f2",
+                        "on-surface-variant": "#98abd4",
+                        "surface-container-low": "#0a1323",
+                        "error-dim": "#bb5551",
+                        "surface-container-lowest": "#000000",
+                        "inverse-on-surface": "#4f5563",
+                        "error-container": "#7f2927",
+                        "on-primary-fixed-variant": "#006666",
+                        "on-secondary": "#152031",
+                        "surface-dim": "#080e1a",
+                        "on-tertiary-fixed-variant": "#555f72",
+                        "inverse-primary": "#006a6a",
+                        "error": "#ee7d77",
+                        "tertiary-dim": "#d0daf0",
+                        "secondary-fixed": "#d8e3fa",
+                        "on-tertiary-container": "#4b5568",
+                        "on-tertiary": "#545e70",
+                        "tertiary-fixed": "#dee8ff",
+                        "primary-dim": "#68c8c7",
+                        "surface-container-highest": "#102546",
+                        "outline": "#63769b",
+                        "on-error-container": "#ff9993",
+                        "secondary": "#939eb4",
+                        "primary-container": "#004f4f",
+                        "outline-variant": "#35486b",
+                        "on-secondary-fixed-variant": "#515c6f",
+                        "on-secondary-fixed": "#354052",
+                        "on-primary": "#004848",
+                        "primary": "#76d6d5",
+                        "inverse-surface": "#f9f9ff",
+                        "on-surface": "#dbe5ff",
+                        "on-primary-container": "#81e0df",
+                        "on-secondary-container": "#b4c0d6",
+                        "surface-tint": "#76d6d5",
+                        "surface": "#080e1a",
+                        "surface-bright": "#112c53",
+                        "tertiary-fixed-dim": "#d0daf0",
+                        "secondary-fixed-dim": "#cad5ec",
+                        "primary-fixed-dim": "#85e4e3",
+                        "secondary-dim": "#939eb4",
+                        "on-error": "#490106",
+                        "background": "#080e1a",
+                        "on-background": "#dbe5ff",
+                        "surface-container": "#0d192f",
+                        "surface-variant": "#102546",
+                        "secondary-container": "#313c4e",
+                        "on-tertiary-fixed": "#394355",
+                        "tertiary": "#f4f6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #080e1a;
+            color: #dbe5ff;
+        }
+        input::placeholder {
+            color: #63769b;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary/30">
+<!-- SideNavBar Shell -->
+<aside class="w-64 h-screen fixed left-0 top-0 bg-slate-900 border-r border-slate-800/50 flex flex-col h-full py-6 font-manrope antialiased tracking-tight">
+<div class="px-6 mb-10">
+<h1 class="text-lg font-bold tracking-widest text-teal-400 uppercase">Sovereign Analyst</h1>
+<p class="text-xs text-on-surface-variant/60 font-medium">Financial Intelligence</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Dashboard Tab -->
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Customers Tab (Active) -->
+<a class="flex items-center px-6 py-3 text-teal-400 border-l-4 border-teal-400 bg-slate-800/50 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="group">group</span>
+<span>Customers</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="payments">payments</span>
+<span>Collections</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="assessment">assessment</span>
+<span>Reports</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary-container text-primary font-bold py-3 rounded-lg hover:brightness-110 active:scale-95 duration-150 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                New Analysis
+            </button>
+</div>
+</aside>
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 left-64 h-16 z-10 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/30 flex justify-between items-center px-8 w-full font-inter text-sm">
+<div class="flex items-center bg-surface-container-highest px-4 py-1.5 rounded-full border border-outline-variant/20 focus-within:ring-1 focus-within:ring-teal-500/50 transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface ml-2 w-64" placeholder="Global counterparty search..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:text-white transition-opacity"><span class="material-symbols-outlined" data-icon="notifications">notifications</span></button>
+<button class="hover:text-white transition-opacity"><span class="material-symbols-outlined" data-icon="help_outline">help_outline</span></button>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-semibold px-4 py-2 rounded-md hover:brightness-110 active:scale-95 transition-all">
+                Execute Trade
+            </button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="User profile" data-alt="close-up portrait of a professional male analyst in a suit against a dark corporate background with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI9iv3BvHOtpsl2run3Tn3Qbi2JvU-uZjyhYWeB_AYQEhhof2G7Sunh03l090JFozSNnqrjCSCmD-AzxHXLoOzcpMAlcgFEm2YiJwxHPviY-2bkV0btYz9x5JfItZbgwcWcmzsK0R3g4Gunr-F5c-Xfz6Aoi5aITpDJAjFA5IBQY9DGLtiewE9vU2YUwQglycAAv6ffzERn9so5EQZ8pAeH_n20-tSKLkvhQfdplG-7pkEHLG29OfXN4xweHqfZ34IojSzgjCOkhE"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pl-64 pt-16 min-h-screen bg-surface">
+<div class="p-10 max-w-7xl mx-auto space-y-10">
+<!-- Page Header -->
+<div class="flex items-end justify-between">
+<div>
+<h2 class="text-3xl font-headline font-extrabold tracking-tight text-on-surface">Müşteri Yönetimi</h2>
+<p class="text-on-surface-variant mt-1">High-end exposure monitoring and risk assessment.</p>
+</div>
+<div class="text-right">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant/40 font-bold">System Status</span>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(118,214,213,0.6)]"></div>
+<span class="text-xs font-mono text-primary/80 uppercase">Live Risk Data Active</span>
+</div>
+</div>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- Section 1: Müşteri Giriş Formu (Bento Style Layout) -->
+<section class="col-span-12 lg:col-span-5 bg-surface-container rounded-xl p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<h3 class="text-lg font-headline font-bold text-on-surface mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="edit_note">edit_note</span>
+                        Müşteri Giriş Formu
+                    </h3>
+<form class="space-y-6">
+<div class="space-y-1.5 group">
+<label class="text-xs font-semibold text-on-surface-variant/80 uppercase tracking-wider ml-1">Müşteri Adı</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-md px-4 py-3 text-on-surface focus:ring-0 focus:border-none group-focus-within:bg-surface-bright transition-colors" placeholder="Örn: Ahmet Yılmaz" type="text"/>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<div class="space-y-1.5 group">
+<label class="text-xs font-semibold text-on-surface-variant/80 uppercase tracking-wider ml-1">Firma Adı</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-md px-4 py-3 text-on-surface focus:ring-0 focus:border-none group-focus-within:bg-surface-bright transition-colors" placeholder="Örn: Global Lojistik A.Ş." type="text"/>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1.5 group">
+<label class="text-xs font-semibold text-on-surface-variant/80 uppercase tracking-wider ml-1">Açık Bakiye</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-md px-4 py-3 text-on-surface focus:ring-0 focus:border-none group-focus-within:bg-surface-bright transition-colors" placeholder="0.00 TL" type="number"/>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<div class="space-y-1.5 group">
+<label class="text-xs font-semibold text-on-surface-variant/80 uppercase tracking-wider ml-1">Gecikme Günü</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-md px-4 py-3 text-on-surface focus:ring-0 focus:border-none group-focus-within:bg-surface-bright transition-colors" placeholder="0" type="number"/>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+</div>
+<div class="space-y-1.5 group">
+<label class="text-xs font-semibold text-on-surface-variant/80 uppercase tracking-wider ml-1">Aktif Proje Sayısı</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-md px-4 py-3 text-on-surface focus:ring-0 focus:border-none group-focus-within:bg-surface-bright transition-colors" placeholder="Örn: 5" type="number"/>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<!-- Section 2: İşlem Butonları -->
+<div class="pt-6 space-y-3">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold py-3.5 rounded-md shadow-lg shadow-primary/10 flex items-center justify-center gap-2 hover:brightness-110 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+                                Müşteri Ekle
+                            </button>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-transparent border border-outline/30 text-on-surface-variant font-medium py-2.5 rounded-md hover:bg-white/5 hover:text-white active:scale-95 transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="backspace">backspace</span>
+                                    Formu Temizle
+                                </button>
+<button class="bg-transparent border border-outline/30 text-on-surface-variant font-medium py-2.5 rounded-md hover:bg-white/5 hover:text-white active:scale-95 transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="database">database</span>
+                                    Test Veri Yükle
+                                </button>
+</div>
+</div>
+</form>
+</section>
+<!-- Section 3: Müşteri Listesi -->
+<section class="col-span-12 lg:col-span-7 space-y-6">
+<div class="bg-surface-container rounded-xl overflow-hidden">
+<div class="px-8 py-6 border-b border-outline-variant/10 flex justify-between items-center">
+<h3 class="text-lg font-headline font-bold text-on-surface">Portföy Analizi</h3>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container-low rounded-lg text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</button>
+<button class="p-2 bg-surface-container-low rounded-lg text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low/50">
+<tr>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/60">Ad</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/60">Firma Adı</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/60">Açık Bakiye</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/60">Gecikme</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/60 text-right">Risk Seviyesi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="px-8 py-5 text-sm font-semibold text-on-surface">Selçuk Erdem</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">Nexus Tech Lab</td>
+<td class="px-6 py-5 text-sm font-mono text-on-surface">₺452.900,00</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">42 Gün</td>
+<td class="px-8 py-5 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-error-container/20 text-error-dim border border-error-container/30">
+                                                High Risk
+                                            </span>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="px-8 py-5 text-sm font-semibold text-on-surface">Aylin Demir</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">Aura Solar Energy</td>
+<td class="px-6 py-5 text-sm font-mono text-on-surface">₺1.200,00</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">0 Gün</td>
+<td class="px-8 py-5 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary-container/20 text-primary border border-primary-container/30">
+                                                Low Risk
+                                            </span>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="px-8 py-5 text-sm font-semibold text-on-surface">Can Özkan</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">Vertex Dynamics</td>
+<td class="px-6 py-5 text-sm font-mono text-on-surface">₺89.450,00</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">12 Gün</td>
+<td class="px-8 py-5 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-on-tertiary-fixed-variant/10 text-on-secondary-container border border-on-tertiary-fixed-variant/20">
+                                                Medium Risk
+                                            </span>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="px-8 py-5 text-sm font-semibold text-on-surface">Zeynep Kaya</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">Pioneer Retail Ltd</td>
+<td class="px-6 py-5 text-sm font-mono text-on-surface">₺32.000,00</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">2 Gün</td>
+<td class="px-8 py-5 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary-container/20 text-primary border border-primary-container/30">
+                                                Low Risk
+                                            </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-8 py-4 bg-surface-container-low/30 flex justify-between items-center">
+<span class="text-xs text-on-surface-variant/50">Showing 4 of 124 entities</span>
+<div class="flex gap-4">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-all disabled:opacity-30" disabled="">Previous</button>
+<button class="text-xs font-bold text-primary hover:brightness-125 transition-all">Next</button>
+</div>
+</div>
+</div>
+<!-- Risk Overview Card -->
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-5 rounded-lg border-l-4 border-error">
+<span class="text-[10px] font-bold text-error/60 uppercase tracking-widest">Total Exposure</span>
+<div class="text-xl font-bold text-on-surface mt-1">₺1,842K</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-lg border-l-4 border-primary">
+<span class="text-[10px] font-bold text-primary/60 uppercase tracking-widest">Healthy Flow</span>
+<div class="text-xl font-bold text-on-surface mt-1">84.2%</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-lg border-l-4 border-outline">
+<span class="text-[10px] font-bold text-on-surface-variant/60 uppercase tracking-widest">Pending Projects</span>
+<div class="text-xl font-bold text-on-surface mt-1">12 Unit</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FRMYS - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#0f1f3a",
+                      "tertiary-container": "#dee8ff",
+                      "on-primary-fixed": "#004747",
+                      "primary-fixed": "#93f2f2",
+                      "on-surface-variant": "#98abd4",
+                      "surface-container-low": "#0a1323",
+                      "error-dim": "#bb5551",
+                      "surface-container-lowest": "#000000",
+                      "inverse-on-surface": "#4f5563",
+                      "error-container": "#7f2927",
+                      "on-primary-fixed-variant": "#006666",
+                      "on-secondary": "#152031",
+                      "surface-dim": "#080e1a",
+                      "on-tertiary-fixed-variant": "#555f72",
+                      "inverse-primary": "#006a6a",
+                      "error": "#ee7d77",
+                      "tertiary-dim": "#d0daf0",
+                      "secondary-fixed": "#d8e3fa",
+                      "on-tertiary-container": "#4b5568",
+                      "on-tertiary": "#545e70",
+                      "tertiary-fixed": "#dee8ff",
+                      "primary-dim": "#68c8c7",
+                      "surface-container-highest": "#102546",
+                      "outline": "#63769b",
+                      "on-error-container": "#ff9993",
+                      "secondary": "#939eb4",
+                      "primary-container": "#004f4f",
+                      "outline-variant": "#35486b",
+                      "on-secondary-fixed-variant": "#515c6f",
+                      "on-secondary-fixed": "#354052",
+                      "on-primary": "#004848",
+                      "primary": "#76d6d5",
+                      "inverse-surface": "#f9f9ff",
+                      "on-surface": "#dbe5ff",
+                      "on-primary-container": "#81e0df",
+                      "on-secondary-container": "#b4c0d6",
+                      "surface-tint": "#76d6d5",
+                      "surface": "#080e1a",
+                      "surface-bright": "#112c53",
+                      "tertiary-fixed-dim": "#d0daf0",
+                      "secondary-fixed-dim": "#cad5ec",
+                      "primary-fixed-dim": "#85e4e3",
+                      "secondary-dim": "#939eb4",
+                      "on-error": "#490106",
+                      "background": "#080e1a",
+                      "on-background": "#dbe5ff",
+                      "surface-container": "#0d192f",
+                      "surface-variant": "#102546",
+                      "secondary-container": "#313c4e",
+                      "on-tertiary-fixed": "#394355",
+                      "tertiary": "#f4f6ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #080e1a; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(16, 37, 70, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .gradient-btn {
+            background: linear-gradient(135deg, #76d6d5 0%, #004f4f 100%);
+        }
+    </style>
+</head>
+<body class="text-on-surface antialiased">
+<!-- SIDEBAR NAV -->
+<aside class="w-64 h-screen fixed left-0 top-0 bg-slate-900 border-r border-slate-800/50 font-manrope antialiased tracking-tight flex flex-col py-6 z-20">
+<div class="px-6 mb-10">
+<h1 class="text-lg font-bold tracking-widest text-teal-400 uppercase">Sovereign Analyst</h1>
+<p class="text-[10px] text-slate-500 tracking-[0.2em] mt-1 uppercase">Financial Intelligence</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Dashboard Tab (Active) -->
+<a class="flex items-center px-6 py-3 text-teal-400 border-l-4 border-teal-400 bg-slate-800/50 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">group</span>
+<span class="text-sm font-medium">Customers</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">payments</span>
+<span class="text-sm font-medium">Collections</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">assessment</span>
+<span class="text-sm font-medium">Reports</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="gradient-btn w-full py-3 rounded-lg text-on-primary font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 active:scale-95 duration-150">
+<span class="material-symbols-outlined text-sm">add</span>
+                New Analysis
+            </button>
+</div>
+</aside>
+<!-- TOP NAV -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/30 z-10 flex justify-between items-center px-8 w-full font-inter text-sm">
+<div class="flex items-center bg-surface-container-highest px-4 py-1.5 rounded-full w-96">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder-on-surface-variant w-full ml-2" placeholder="Search risk indicators, customers..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 border-r border-slate-800/50 pr-6">
+<button class="text-slate-400 hover:text-white transition-opacity">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-slate-400 hover:text-white transition-opacity">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">Alex Sovereign</p>
+<p class="text-[10px] text-on-surface-variant">Chief Analyst</p>
+</div>
+<img class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container" data-alt="professional portrait of an analyst in a high-end dark office setting with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt1y4vauLgiPZiFsTSQ8R4NHC0LpJYyRVgfO_GqMsMvu2yFA71ZJuqg6F3azELNMWcz_a7LNMwo5kV6X8sDg9OO3Ev9-1w0RuOyyKpPP19l5CQe9lUActnM_29qAZDS1GbRPS1R95GxSTsDH33zVsl2lXLIHseq3GcYxc_3LHYqRgKhzBleldT2EcQTvIu_ImxacgnF-tK9ipIaskHVNlud1JnZrbypjyCMBxtn3KV5mTf348WXyttFkdNp5AvLxsbCnG1LoICOE8"/>
+</div>
+</div>
+</header>
+<!-- MAIN CONTENT -->
+<main class="ml-64 mt-16 p-8 min-h-screen bg-surface">
+<div class="max-w-7xl mx-auto">
+<!-- Dashboard Header -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface">Dashboard - Sistem Özeti</h2>
+<p class="text-on-surface-variant mt-2 max-w-lg">
+                        Operational intelligence overview for FRMYS risk management ecosystem. Real-time data curation and risk distribution.
+                    </p>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 text-xs font-semibold text-primary border border-outline-variant/30 rounded-lg hover:bg-primary/10 transition-colors">
+                        PDF Export
+                    </button>
+<button class="px-4 py-2 text-xs font-semibold text-on-primary gradient-btn rounded-lg shadow-lg">
+                        Real-time Update
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Section -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Card: Toplam Müşteri -->
+<div class="col-span-12 md:col-span-4 bg-surface-container rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">group</span>
+</div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">Toplam Müşteri Sayısı</p>
+<h3 class="text-5xl font-extrabold text-primary tracking-tighter">1,248</h3>
+<div class="mt-4 flex items-center gap-2">
+<span class="inline-flex items-center text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold">
+<span class="material-symbols-outlined text-[12px] mr-1">trending_up</span> +3.2%
+                        </span>
+<span class="text-[10px] text-on-surface-variant italic">since last month</span>
+</div>
+</div>
+<!-- Card: Risk Durumları (The Centerpiece) -->
+<div class="col-span-12 md:col-span-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+<div class="flex justify-between items-center mb-8">
+<div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Risk Durumları</p>
+<h3 class="text-lg font-bold text-on-surface mt-1">Portfolio Risk Exposure</h3>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] text-primary-dim font-bold tracking-widest uppercase">Live Scan</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<!-- Custom Gauge-style visual -->
+<div class="relative w-32 h-32 flex items-center justify-center border-4 border-surface-container-highest rounded-full">
+<div class="absolute inset-0 border-t-4 border-error rounded-full rotate-[120deg]"></div>
+<div class="text-center">
+<span class="text-2xl font-black block text-on-surface">1,248</span>
+<span class="text-[8px] uppercase tracking-tighter text-on-surface-variant">Total Units</span>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-3 gap-4 w-full">
+<div class="bg-surface-container p-4 rounded-lg border-l-4 border-error">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">High Risk</p>
+<p class="text-2xl font-extrabold text-error mt-1">12</p>
+<p class="text-[10px] text-error/60 mt-1">Action Required</p>
+</div>
+<div class="bg-surface-container p-4 rounded-lg border-l-4 border-secondary">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Medium</p>
+<p class="text-2xl font-extrabold text-secondary mt-1">45</p>
+<p class="text-[10px] text-secondary/60 mt-1">Under Review</p>
+</div>
+<div class="bg-surface-container p-4 rounded-lg border-l-4 border-primary">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Low Risk</p>
+<p class="text-2xl font-extrabold text-primary mt-1">1,191</p>
+<p class="text-[10px] text-primary/60 mt-1">Verified Stable</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card: Financial Metrics -->
+<div class="col-span-12 md:col-span-4 bg-surface-container rounded-xl p-6 flex flex-col justify-between">
+<div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">En Yüksek Bakiye</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold text-on-surface">₺2.4M</span>
+<span class="text-[10px] text-primary font-bold">Premium Tier</span>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">Ortalama Bakiye</p>
+<h3 class="text-2xl font-bold text-on-surface">₺85k</h3>
+</div>
+</div>
+<!-- Card: Delay Indicator -->
+<div class="col-span-12 md:col-span-3 bg-surface-container rounded-xl p-6 flex flex-col justify-between border-b-4 border-error-container">
+<div>
+<span class="material-symbols-outlined text-error-dim mb-4 text-3xl">timer</span>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">En Uzun Gecikme</p>
+<h3 class="text-4xl font-extrabold text-on-surface">58 <span class="text-lg font-medium text-on-surface-variant">Gün</span></h3>
+</div>
+<div class="mt-4">
+<p class="text-[10px] text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Critical Threshold Exceeded
+                        </p>
+</div>
+</div>
+<!-- Card: Activity Graph (Decorative Visual) -->
+<div class="col-span-12 md:col-span-5 bg-surface-container-highest rounded-xl p-6 relative overflow-hidden flex items-end">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 mix-blend-screen" data-alt="abstract dark data visualization with sleek cyan lines and geometric patterns against a deep obsidian background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHw0A8Pyi2tp0jqj8QVjz2b75sOMu1SwsTjjAX4-7xpsOs0DXwCU5g7q4C8MrtiRHsZco7wtnoHzVLFSh4vyxMwl32Bm6-ZAanwCTlig0j64-l7gTPla6joe7c5Zh5SEfDwg1HgvkGFiSk4a0CO1vkgE8Zwhtj2HWs-eGidguhl2JL-USkOo68B17ZDau2ONClQPWQTf6eZnr5l96GKVbAF3cmfUHIWO3I2jhvX7KLNsD88lnHMRMg22SZPDKU-iG0Aukm0O8EttY"/>
+</div>
+<div class="relative z-10 w-full">
+<div class="flex justify-between items-center mb-2">
+<p class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Network Activity</p>
+<span class="text-[10px] text-primary">Active Sessions</span>
+</div>
+<div class="h-1 bg-surface-container-low rounded-full w-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 shadow-[0_0_10px_#76d6d5]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Analysis Section (Recessed style) -->
+<div class="mt-12 bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/5">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-tertiary">insights</span>
+</div>
+<div class="flex-1">
+<h4 class="text-xl font-bold text-on-surface">Analyst Insights</h4>
+<p class="text-sm text-on-surface-variant">System detected a 12% rise in Medium Risk cases in the Aegean region. Suggest automated audit trigger.</p>
+</div>
+<button class="px-6 py-3 bg-surface-container-high hover:bg-surface-container-highest transition-colors rounded-lg text-primary text-xs font-bold uppercase tracking-widest">
+                        Review Detailed Logs
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB Suppression per Rule: No FAB in structured financial analyst views -->
+</body></html>
